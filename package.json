@@ -1,0 +1,33 @@
+{
+  "name": "next-tsc-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "license": "ISC",
+  "sideEffects": false,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "transpile":"tsc -p tsconfig.build.json",
+    "start": "next app",
+    "sortdeps":"npx sort-package-json",
+    "updeps":"npx upd"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.4.5",
+    "core-js": "3.1.4",
+    "next": "9.0.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-is": "16.8.6",
+    "tslib": "1.10.0"
+  },
+  "devDependencies": {
+    "log-symbols":"3.0.0",
+    "@types/react": "16.8.22",
+    "@types/react-dom": "16.8.4",
+    "@types/styled-jsx": "2.2.8",
+    "babel-plugin-module-resolver": "3.2.0",
+    "typescript": "3.5.3"
+  }
+}
