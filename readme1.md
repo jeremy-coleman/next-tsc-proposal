@@ -1,3 +1,6 @@
+# next-tsc-proposal
+better way to use typescript / postcss / etc with nextjs
+
 # Custom build with TypeScript Compiler
 
 ## How to use
