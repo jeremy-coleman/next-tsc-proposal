@@ -1,3 +1,13 @@
 {
-
+  "defaultSeverity": "warn",
+  "extends": ["tslint-react", "tslint-config-prettier"],
+  "jsRules": {
+    "prettier": true
+  },
+  "rules": {
+    "jsx-no-lambda":false,
+    "jsx-boolean-value":false,
+    "prettier": true
+  },
+  "rulesDirectory": ["tslint-plugin-prettier"]
 }

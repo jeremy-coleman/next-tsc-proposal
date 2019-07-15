@@ -14,8 +14,6 @@ const AppConfig = {
   }
 }
 
-
-
 function App(){
     const [initialized, setInitialized] = React.useState(false)
     React.useEffect(() => {

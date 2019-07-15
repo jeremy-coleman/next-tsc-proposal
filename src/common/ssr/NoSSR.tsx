@@ -30,7 +30,7 @@ export function NoSSR({ children, defer = false, fallback = null }) {
     }
   }, [defer]);
 
-  // We need the Fragment here to force react-docgen to recognise NoSsr as a component.
+  // Fragment forces react-docgen to recognize the component.
   return <React.Fragment>{mountedState ? children : fallback}</React.Fragment>;
 }
 

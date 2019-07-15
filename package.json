@@ -4,30 +4,50 @@
   "private": true,
   "license": "ISC",
   "sideEffects": false,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "transpile":"tsc -p tsconfig.build.json",
-    "start": "next app",
-    "sortdeps":"npx sort-package-json",
-    "updeps":"npx upd"
+    "start": "gulp start --max-old-space-size=4096",
+    "lint": "tslint -c ./tslint.json -p ./tsconfig.json --fix",
+    "prettify:packages": "prettier --print-width 140 --tab-width 2 --single-quote --write 'packages/*/src/**/{*.js,*.ts*}'",
+    "prettify": "prettier --write ./src/**/*{.js,.jsx,.tsx,.ts}"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "parser": "typescript",
+    "printWidth": 140,
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": false,
+    "useTabs": false,
+    "singleQuote": true
   },
   "dependencies": {
-    "@babel/runtime": "7.4.5",
-    "core-js": "3.1.4",
-    "next": "9.0.0",
+    "next": "9.0.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-is": "16.8.6",
     "tslib": "1.10.0"
   },
   "devDependencies": {
-    "log-symbols":"3.0.0",
-    "@types/react": "16.8.22",
+    "@types/lodash": "4.14.136",
+    "@types/node": "12.6.2",
+    "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
     "@types/styled-jsx": "2.2.8",
     "babel-plugin-module-resolver": "3.2.0",
-    "typescript": "3.5.3"
+    "gulp": "4.0.2",
+    "gulp-typescript": "5.0.1",
+    "html-webpack-plugin": "3.2.0",
+    "lodash": "4.17.14",
+    "log-symbols": "3.0.0",
+    "sucrase": "3.10.1",
+    "ts-loader": "^6.0.4",
+    "tsconfig-paths-webpack-plugin": "3.2.0",
+    "typescript": "3.5.3",
+    "typescript-tslint-plugin": "0.5.4",
+    "webpack": "4.35.3",
+    "webpack-clean-obsolete-chunks": "0.4.0",
+    "webpack-cli": "3.3.6",
+    "webpack-plugin-serve": "0.11.0"
   }
 }

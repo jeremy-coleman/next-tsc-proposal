@@ -1,24 +1,37 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
-    "outDir": "_never",
+    "outDir":"app",
+    "preserveConstEnums": true,
+    "lib": ["dom","esnext", "dom.iterable"],
     "target": "esnext",
     "module": "esnext",
-    "jsx": "preserve",
+    "jsx":"react",
+    "moduleResolution": "node",
     "allowJs": true,
     "checkJs": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "sourceMap": false,
+    "pretty": true,
+    "preserveWatchOutput": true,
     "skipLibCheck": true,
+    "watch":true,
+    "incremental": true,
+    "allowUmdGlobalAccess": true,
     "baseUrl": "./src",
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
     "resolveJsonModule": true,
-    "lib": ["dom","esnext", "dom.iterable"]
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+        "alwaysShowRuleFailuresAsWarnings": false,
+        "ignoreDefinitionFiles": true,
+        "configFile": "./tslint.json",
+        "suppressWhileTypeErrorsPresent": true,
+        "packageManager":"yarn",
+        "jsEnable":true
+      }
+    ]
   },
-  "include": ["src","types"],
-  "exclude": ["**/node_modules/**/*", "node_modules", "**/.next/**/*", "app"]
+  "include": ["src"]
 }

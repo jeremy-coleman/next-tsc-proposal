@@ -5,7 +5,10 @@ type HomeProps = {
 }
 
 function Home(props: HomeProps){
-  return <div style={{backgroundColor: props.color || 'teal'}}>{'type exports work'}</div>
+  let style: CSSProperties = {
+    backgroundColor: props.color || 'teal'
+    }
+  return <div style={style}>{'type exports workz'}</div>
 }
 
 export {Home, HomeProps}

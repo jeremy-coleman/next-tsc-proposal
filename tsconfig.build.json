@@ -5,25 +5,22 @@
     "outDir": "app",
     "target": "esnext",
     "module": "esnext",
-    "jsx": "preserve",
+    "jsx": "react",
     "allowJs": true,
     "checkJs": false,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "preserveConstEnums": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "skipLibCheck": true,
     "baseUrl": "./src",
-    "watch": true,
+    "preserveWatchOutput": true,
+    "watch": false,
     "incremental": true,
     "pretty": true,
-    "tsBuildInfoFile": "./app/.next/tsbuild",
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
     "resolveJsonModule": true,
     "lib": ["dom","esnext", "dom.iterable", "webworker", "webworker.importscripts"]
   },
   "include": ["src","types"],
-  "exclude": ["**/node_modules/**/*", "node_modules", "**/.next/**/*"]
+  "exclude": ["**/node_modules/**/*", "node_modules", "**/.next/**/*", "src/client", "src/app"]
 }

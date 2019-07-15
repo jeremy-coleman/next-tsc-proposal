@@ -1,4 +1,5 @@
-// NOTE: this is the global app config type definition
+/// <reference types="react" />
+
 declare var AppConfig : {
   production?: boolean;
   configName?: string;
@@ -10,6 +11,21 @@ declare var AppConfig : {
   env?: any;
 };
 
+type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+
+//type NestedSelectors = React.CSSProperties["&"] & React.CSSProperties["selectors"] & React.CSSProperties["$nest"]
+
+interface CSSProperties extends React.CSSProperties {
+    '&'?: {
+      [selector: string]: Omit<React.CSSProperties, '&'>
+    },
+    selectors?: {
+      [selector: string]: Omit<React.CSSProperties, '&'>
+    },
+    $nest?: {
+      [selector: string]: Omit<React.CSSProperties, '&'>
+    }
+}
 
 
 declare module "file-loader?!*" {
