@@ -1,6 +1,8 @@
 # next-tsc-proposal
 better way to use typescript / postcss / etc with nextjs
 
+gulp and preact branches also
+
 # Custom build with TypeScript Compiler
 
 ## How to use
